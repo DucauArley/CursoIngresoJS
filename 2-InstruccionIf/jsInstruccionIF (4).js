@@ -10,14 +10,4 @@ function Mostrar()
 		alert("Es adolecente");
 
 	}
-	if (edad >= 18) 
-	{
-		alert("Es mayor de edad");
-	}
-	if (edad < 13)
-	{
-		alert("No es mayor de edad");
-	}
-
-
 }//FIN DE LA FUNCIÓN
