@@ -15,31 +15,72 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 function CalcularPrecio () 
 {
  	var lamparitas;
- 	var precioLamparitas
+ 	var precioLamparitas;
  	var descuento;
  	var ingresosBrutos;
  	var precioDescuento;
- 	var marca
+ 	var marca;
+ 	var precioIngresosBrutos;
 
+ 	descuento = 0;
  	precioLamparitas = 35;
  	ingresosBrutos = 0.10;
  	lamparitas = parseInt(document.getElementById('Cantidad').value);
- 	marca = document.getElementById('marca').value;
+ 	marca = document.getElementById('Marca').value;
 
  	if(lamparitas > 5)
  	{
  		descuento = 0.50;
- 		precioDescuento = precioLamparitas * descuento;
  	}
- 	if (lamparitas = 5) 
+
+ 	if (lamparitas == 5) 
  	{
-
+ 		if (marca == "ArgentinaLuz") 
+ 		{
+ 			descuento = 0.40;
+ 		}
+ 		else
+ 		{
+ 			descuento = 0.30;
+ 		}
  	}
 
+ 	if (lamparitas == 4) 
+ 	{
+ 		if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") 
+ 		{
+ 			descuento = 0.25;
+ 		}
+ 		else
+ 		{
+ 			descuento = 0.20;
+ 		}
+ 	}
 
+ 	if (lamparitas == 3) 
+ 	{
+ 		switch(marca)
+ 		{
+ 			case "ArgentinaLuz":
+ 				descuento = 0.15;
+ 				break;
+ 			case "FelipeLamparas":
+ 				descuento = 0.10;
+ 				break;
+ 			default:
+ 				descuento =0.05;
+ 		}
+ 	}
 
+ 	precioDescuento = (precioLamparitas * lamparitas) - (precioLamparitas * lamparitas * descuento);
 
+ 	if (precioDescuento > 119) 
+ 	{
+ 		precioIngresosBrutos = precioDescuento * ingresosBrutos;
+ 		precioDescuento = precioDescuento + precioIngresosBrutos;
 
+ 		alert("Usted pago " + precioDescuento + " de IIBB siendo " + precioIngresosBrutos + " el impesto que se pago");
+ 	}
 
-
+ 	document.getElementById('precioDescuento').value = precioDescuento;
 }
