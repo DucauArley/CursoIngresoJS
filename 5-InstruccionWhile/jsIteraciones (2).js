@@ -1,13 +1,13 @@
 function Mostrar()
 {
-	var numeros;
-	numeros = 10;
+	var contador;
+	contador = 10;
 
 
-	while(numeros > 0)
+	while(contador > 0)
 	{
-		alert(numeros);
-		numeros = numeros - 1;
+		document.write("<br> " + contador);
+		contador --;
 	}
 
 }//FIN DE LA FUNCIÓN
