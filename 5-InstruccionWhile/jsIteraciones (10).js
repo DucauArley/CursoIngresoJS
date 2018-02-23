@@ -18,6 +18,12 @@ function Mostrar()
 	while(respuesta != "no")
 	{
 		numero = parseInt(prompt("Ingrese un numero"));
+
+		while(isNaN(numero))
+		{
+			numero = parseInt(prompt("Ingrese un numero"));
+		}
+		
 		respuesta = prompt("Para salir, no");
 
 		if (numero > 0) 

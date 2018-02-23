@@ -10,7 +10,13 @@ function Mostrar()
 	while(respuesta == "si")
 	{
 		numero = parseInt(prompt("Ingrese un numero"));
-		respuesta = prompt("Para continuarm, si");
+		
+		while(isNaN(numero))
+		{
+			numero = parseInt(prompt("Ingrese un numero"));
+		}
+
+		respuesta = prompt("Para continuar, si");
 
 		if(numero > 0)
 		{
@@ -20,10 +26,9 @@ function Mostrar()
 		{
 			if(numero != 0)
 			{
-			negativo = numero * negativo;
+				negativo = numero * negativo;
 			}
 		}
-
 	}
 
 
