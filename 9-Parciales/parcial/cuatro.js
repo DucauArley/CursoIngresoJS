@@ -1,3 +1,7 @@
+//Ingresar 2 numeros si son iguales los concatenamos si el primero es mayor que el segundo los multiplicamos y 
+//si es menor los restamos
+
+
 function Mostrar()
 {
 	var numeroUno;
@@ -9,20 +13,24 @@ function Mostrar()
 
 	if (numeroUno == numeroDos) 
 	{
-		resultado = numeroUno * numeroDos;
-		document.write("La multiplicacion es: " + resultado);
+		resultado = (numeroUno + "" + numeroDos);
 	}
 	else
 	{
 		if (numeroUno > numeroDos) 
 		{
-			resultado = numeroUno - numeroDos;
-			document.write("La resta es: " + resultado);
+			resultado = numeroUno * numeroDos;
+
+			if (resultado % 2 == 0 && numeroDos !=0) 
+			{
+				resultado = resultado + "<br> " + "Es par";
+			}
 		}
 		else
 		{
-			resultado = numeroUno + numeroDos;
-			document.write("La suma es: " + resultado);		}
+			resultado = numeroUno - numeroDos;
+		}
 	}
 
+	document.write("El resultado es: " + resultado);
 }

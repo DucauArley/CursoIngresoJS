@@ -1,13 +1,15 @@
+// 1) se ingresa un porcentaje de descuento y el importe mostrar cuanto se debe pagar
 function Mostrar()
 {
-  var importe;
-  var iva;
-  var importeConIva;
+  	var importe;
+  	var descuento;
+    var importeConDescuento;
 
-  importe = parseInt(prompt("Ingrese el importe de un producto"));
+  	importe = parseInt(prompt("Ingrese el importe de un producto"));
 
-  iva = 0.21;
-  importeConIva = (importe * iva) + importe;
+  	descuento = parseInt(prompt("Ingrese el descuento"));
 
-  document.getElementById('importeFinal').value = importeConIva;
+	importeConDescuento = importe -(importe * (descuento * 0.01 ));
+
+ 	document.getElementById('importeFinal').value = importeConDescuento;
 }
