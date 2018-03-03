@@ -8,22 +8,79 @@ var eleccionMaquina;
 
 function comenzar()
 {
-	
-
+	eleccionMaquina = Math.floor(Math.random() * 3) + 1;
+	console.log(eleccionMaquina);
 
 }//FIN DE LA FUNCIÓN
 function piedra()
 {
-	
+	var piedra = 1;
+
+	if (piedra == eleccionMaquina)
+	{
+		alert("Usted empató");
+	}
+	else
+	{
+		if (eleccionMaquina == 2) 
+		{
+			alert("Usted perdio");
+		}
+		else
+		{
+			alert("Usted gano");
+		}
+	}
+
 
 }//FIN DE LA FUNCIÓN
 function papel()
 {
+	var papel = 2;
+
+	if (papel == eleccionMaquina)
+	{
+		alert("Usted empató");
+	}
+	else
+	{
+		if (eleccionMaquina == 3) 
+		{
+			alert("Usted perdio");
+		}
+		else
+		{
+			alert("Usted gano");
+		}
+	}
+
+
 
 
 }//FIN DE LA FUNCIÓN
 function tijera()
 {
-	
+	var tijera = 3;
+
+	if (tijera == eleccionMaquina)
+	{
+		alert("Usted empató");
+	}
+	else
+	{
+		if (eleccionMaquina == 1) 
+		{
+			alert("Usted perdio");
+		}
+		else
+		{
+			alert("Usted gano");
+		}
+	}
+
+
+
+
+
 
 }//FIN DE LA FUNCIÓN
