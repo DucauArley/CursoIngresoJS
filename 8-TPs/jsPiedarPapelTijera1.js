@@ -9,77 +9,60 @@ var eleccionMaquina;
 function comenzar()
 {
 	eleccionMaquina = Math.floor(Math.random() * 3) + 1;
-	console.log(eleccionMaquina);
 
 }//FIN DE LA FUNCIÓN
 function piedra()
 {
-	var piedra = 1;
-
-	if (piedra == eleccionMaquina)
+	switch(eleccionMaquina)
 	{
-		alert("Usted empató");
-	}
-	else
-	{
-		if (eleccionMaquina == 2) 
-		{
+		case 1:
+			alert("Usted empato");
+			break;
+		case 2:
 			alert("Usted perdio");
-		}
-		else
-		{
+			break;
+		case 3:
 			alert("Usted gano");
-		}
+			break;
 	}
 
+	eleccionMaquina = Math.floor(Math.random() * 3) + 1;
 
 }//FIN DE LA FUNCIÓN
 function papel()
 {
-	var papel = 2;
-
-	if (papel == eleccionMaquina)
+	switch(eleccionMaquina)
 	{
-		alert("Usted empató");
-	}
-	else
-	{
-		if (eleccionMaquina == 3) 
-		{
-			alert("Usted perdio");
-		}
-		else
-		{
+		case 1:
 			alert("Usted gano");
-		}
+			break;
+		case 2:
+			alert("Usted empato");
+			break;
+		case 3:
+			alert("Usted perdio");
+			break;
 	}
 
-
-
+	eleccionMaquina = Math.floor(Math.random() * 3) + 1;
 
 }//FIN DE LA FUNCIÓN
 function tijera()
 {
-	var tijera = 3;
-
-	if (tijera == eleccionMaquina)
+	switch(eleccionMaquina)
 	{
-		alert("Usted empató");
-	}
-	else
-	{
-		if (eleccionMaquina == 1) 
-		{
+		case 1:
 			alert("Usted perdio");
-		}
-		else
-		{
+			break;
+		case 2:
 			alert("Usted gano");
-		}
+			break;
+		case 3:
+			alert("Usted empato");
+			break;
 	}
 
-
-
+	eleccionMaquina = Math.floor(Math.random() * 3) + 1;
 
 
 
